@@ -11,6 +11,11 @@ public class PanelManager : Singleton<PanelManager>
     [SerializeField]
     private List<GameObject> layerList = new List<GameObject>();
 
+    public void Remove(GameObject view)
+    {
+        PanelManager.Instance.layerList.Remove(view);
+    }
+
     static public void Open(GameObject view, bool isMutex)
     {
         if (view.activeSelf == false)
@@ -86,6 +91,8 @@ public class PanelManager : Singleton<PanelManager>
             return;
         PanelManager.Instance.layerList[PanelManager.Instance.layerList.Count - 1].SetActive(false);
         PanelManager.Instance.layerList.RemoveAt(PanelManager.Instance.layerList.Count - 1);
+        if (PanelManager.Instance.layerList.Count == 0)
+            return;
         if (PanelManager.Instance.layerList[PanelManager.Instance.layerList.Count - 1].activeSelf == false)
             PanelManager.Instance.layerList[PanelManager.Instance.layerList.Count - 1].SetActive(true);
     }

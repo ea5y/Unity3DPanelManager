@@ -4,7 +4,7 @@ using System.Collections;
 public class MenuControl : MonoBehaviour {
     public void Btn1Click () 
     {
-        TestUI.PanelManager.Open(TestUI.System1.GUISystem1.Instance.View);
+        PanelManager.Open(TestUI.System1.GUISystem1.Instance.View._root, true);
     }
 
     public void Btn2Click()

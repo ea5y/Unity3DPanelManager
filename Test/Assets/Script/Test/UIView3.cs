@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using CustomControl;
 
 namespace TestUI.System1
 {
     [System.Serializable]
-    public class UIView3
+    public class UIView3 : IPageView
     {
         public GameObject root;
+        public GameObject Root { get { return this.root; } }
+
         public UIButton btnChild1;
         public UIButton btnChild2;
 
@@ -26,6 +29,21 @@ namespace TestUI.System1
         public class View3Child2 : UIViewBase
         {
             public GameObject root;
+        }
+
+        public void Init()
+        {
+            if (this.Chilld1.root.activeSelf == true)
+            {
+                this.Chilld1.root.SetActive(false);
+                PanelManager.Instance.Remove(this.Chilld1.root);
+            }
+
+            if (this.Chilld2.root.activeSelf == true)
+            {
+                this.Chilld2.root.SetActive(false);
+                PanelManager.Instance.Remove(this.Chilld2.root);
+            }
         }
     }
 }
