@@ -4,7 +4,7 @@ using System.Collections;
 namespace TestUI.System1
 {
     [System.Serializable]
-    public class UIView2 : UIViewBase
+    public class UIView2
     {
         public GameObject root;
         public UIButton btnChild1;

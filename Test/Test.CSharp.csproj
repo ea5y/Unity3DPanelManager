@@ -241,11 +241,6 @@
     <Compile Include="Assets\Script\Test\UIView2.cs" />
     <Compile Include="Assets\Script\Test\UIView3.cs" />
     <Compile Include="Assets\Script\Test\UIViewBase.cs" />
-    <Compile Include="Assets\Script\UserInfo\UserInfoView.cs" />
-    <Compile Include="Assets\Script\UserInfo\View\XUIUserInfoBase.cs" />
-    <Compile Include="Assets\Script\UserInfo\View\XUIUserInfoBasicData.cs" />
-    <Compile Include="Assets\Script\UserInfo\View\XUIUserInfoCharaStatistics.cs" />
-    <Compile Include="Assets\Script\UserInfo\View\XUIUserInfoCombatGains.cs" />
     <Compile Include="Assets\TestPinchZoom.cs" />
   </ItemGroup>
   <ItemGroup>
